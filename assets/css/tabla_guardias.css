@@ -1,0 +1,26 @@
+/* CSS PARA LA TABLA DE GUARDIAS */
+.tabla-registro {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tabla-registro th,
+  .tabla-registro td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  .tabla-registro th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
+  .tabla-registro tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .tabla-registro td img{
+    width: 22px;
+    height: 22px;
+  }
+  

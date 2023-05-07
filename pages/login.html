@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de sesión</title>
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../assets/css/login.css">
+  <!-- Firebase App (el core de Firebase) -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- Añade los productos que usarás -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+</head>
+
+
+<body>
+  <h1>Inicio de sesión</h1>
+  <form id="login-form" method="post">
+    <label for="username">Usuario:</label>
+    <input type="text" id="username" name="username" required>
+    <br><br>
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required>
+    <br><br>
+    <input type="submit" value="Iniciar sesión">
+  </form>
+  <br>
+  <a href="#">¿Olvidaste tu contraseña?</a>
+  <script src="../js/autenticador.js"></script>
+</body>
+</html>

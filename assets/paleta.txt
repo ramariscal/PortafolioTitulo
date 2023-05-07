@@ -1,0 +1,7 @@
+cafe		= 6F4E37
+
+verde		= 8d9e7f
+
+celeste		= ADCCEA
+
+background	= F6F2E8
