@@ -5,7 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-  <title>Document</title>
+  <title>ADMINISTRACION</title>
+  <!-- ESTILOS CSS -->
+  <link rel="stylesheet" href="assets/css/navbar.css">
+  <link rel="stylesheet" href="assets/css/sidemenu.css">
+  <link rel="stylesheet" href="assets/css/index.css">
   <!-- Firebase App (el core de Firebase) -->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
@@ -14,7 +18,64 @@
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
 </head>
 <body>
-  <H1>HOLA MUNDO</H1>
+  <!-- NAVBAR DE LA PAGINA, EL ENCABEZADO -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="assets/img/logo.png" alt="Logotipo de la empresa"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#"><img src="assets/img/icons/setting.png" alt="Icono configuracion"></a></li>
+        <li><a href="pages/login.html"><img src="assets/img/icons/logout.png" alt="Icono cerrar sesion"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SIDEMENU LATERAL IZQUIERDO -->
+  <div class="sidemenu">
+    <ul class="categories">
+      <li class="category">
+        <a href="#">PERSONAS</a>
+        <ul class="subcategories">
+          <li><a href="pages/guardias.html">GUARDIAS</a></li>
+          <li><a href="#">Subcategoría 1.2</a></li>
+          <li><a href="#">Subcategoría 1.3</a></li>
+        </ul>
+      </li>
+      <li class="category">
+        <a href="#">Categoría 2</a>
+        <ul class="subcategories">
+          <li><a href="#">Subcategoría 2.1</a></li>
+          <li><a href="#">Subcategoría 2.2</a></li>
+          <li><a href="#">Subcategoría 2.3</a></li>
+        </ul>
+      </li>
+      <li class="category">
+        <a href="#">Categoría 3</a>
+        <ul class="subcategories">
+          <li><a href="#">Subcategoría 3.1</a></li>
+          <li><a href="#">Subcategoría 3.2</a></li>
+          <li><a href="#">Subcategoría 3.3</a></li>
+        </ul>
+      </li>
+      <li class="category">
+        <a href="#">Categoría 4</a>
+        <ul class="subcategories">
+          <li><a href="#">Subcategoría 4.1</a></li>
+          <li><a href="#">Subcategoría 4.2</a></li>
+          <li><a href="#">Subcategoría 4.3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- CONTENIDO DEL INDEX -->
+  <div class="content-index">
+    <h1>PANEL DE ADMINISTRACION</h1>
+    <h3>Aqui puedes administrar el Condominio</h3>
+  </div>
+
+
 </body>
 </html>
 <script src="js/autenticador.js"></script>
