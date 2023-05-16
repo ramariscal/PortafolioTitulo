@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guardias</title>
+</head>
+<body>
+  <h1>Guardias</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>RUT</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Dirección</th>
+        <th>Correo</th>
+        <th>Estado</th>
+        <th>Cargo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% guardias.forEach(guardia => { %>
+        <tr>
+          <td><%= guardia.rut %>-<%= guardia.dv %></td>
+          <td><%= guardia.primer_nombre %> <%= guardia.segundo_nombre %></td>
+          <td><%= guardia.primer_apellido %> <%= guardia.segundo_apellido %></td>
+          <td><%= guardia.direccion %></td>
+          <td><%= guardia.mail %></td>
+          <td><%= guardia.estatus %></td>
+          <td><%= guardia.id_cargo %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

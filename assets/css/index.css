@@ -1,9 +1,12 @@
+body{
+    background-color: #fff;
+    color: black;
+}
 .content-index{
     width: 89.5%;
     margin-left: 200px;
     margin-top: 5em;
     text-align: center;
-
 }
 h1{
     font-size: 70px;
