@@ -64,28 +64,88 @@
     </div>
     <!-- TABLA GUARDIAS -->
     <div class="container">
-        <h1>Tabla de Empleados</h1>
-        <table id="tabla-resultados">
-          <thead>
-            <tr>
-              <th>RUT</th>
-              <th>Nombre</th>
-              <th>Apellido</th>
-              <th>Dirección</th>
-              <th>Correo</th>
-              <th>Estado</th>
-              <th>Cargo</th>
-            </tr>
-          </thead>
-          <tbody id="tabla-body"></tbody>
-        </table>
-        <script src="/assets/js/script.js"></script>
+    <!-- CONTENIDO DEL INDEX -->
+    <h1>Administración de empleados</h1>
+    
+    <p>Bienvenido a la página de administración de empleados en el condominio. Aquí puedes gestionar los detalles de los empleados registrados.</p>
+    
+    <div class="navbar">
+      <input type="text" id="searchInput" placeholder="Buscar empleado...">
+      <button id="filterButton">Filtrar</button>
+      <!-- Botón para abrir la ventana modal -->
+      <button id="addButton">Agregar empleado</button>
     </div>
 
+    
+    <table id="tabla-resultados">
+      <thead>
+        <tr>
+          <th>RUT</th>
+          <th>Nombres</th>
+          <th>Apellidos</th>
+          <th>Correo</th>
+          <th>Cargo</th>
+          <th>Dirección</th>
+          <th>Comuna</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-body"></tbody>
+    </table>
+
+  </div>
+  <!-- MODAL PARA LOS FORMULARIOS -->
+  <!-- Ventana modal  AGREGAR EMPLEADO-->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>Agregar Vehículo</h2>
+      <form id="addForm">
+        <label for="patente">RUT:</label>
+        <input type="text" id="rut" required>
+        
+        <label for="marca">Nombre:</label>
+        <input type="text" id="nombre" required>
+        
+        <label for="modelo">Apellido:</label>
+        <input type="text" id="apellido" required>
+        
+        <label for="tipo">Dirección:</label>
+        <input type="text" id="direccion" required>
+        
+        <label for="color">Correo:</label>
+        <input type="text" id="correo" required>
+
+        <label for="rutPropietario">Cargo:</label>
+        <input type="text" id="cargo" required>
+
+        <label for="propietario">Direccion:</label>
+        <input type="text" id="estado" required>
+        
+        <label for="rutPropietario">Comuna:</label>
+        <input type="text" id="estado" required>
+        
+        <div class="modal-buttons">
+          <button type="submit" class="add-button">Agregar</button>
+          <button type="button" class="clear-button">Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Ventana modal ELIMINAR EMPLEADO -->
+  <div id="modaldelete" class="modal">
+    <div class="modal-content">
+      <h2>¿Seguro que desea eliminar registro?</h2>
+      <div class="modal-buttons">
+        <button type="submit" class="yesdelete">Si</button>
+        <Button type="button" class="clear-button">No</Button>
+      </div>
+    </div>
+  </div>
     <!-- FOOTER DE LA PAGINA -->
     <footer class="footer">
         <!-- Contenido del pie de página -->
     </footer>
-
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/modal.js"></script>
 </body>
 </html>
