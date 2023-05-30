@@ -5,12 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-  <title>ADMINISTRACION</title>
+  <title>INGRESOS > VEHICULO</title>
   <base href="/">
   <!-- ESTILOS CSS -->
   <link rel="stylesheet" href="/assets/css/navbar.css">
   <link rel="stylesheet" href="/assets/css/sidemenu.css">
   <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="stylesheet" href="/assets/css/vehiculo.css">
   <!-- Firebase App (el core de Firebase) -->
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
@@ -71,14 +72,167 @@
     </ul>
 </div>
 
+  <div class="container">
+    <!-- CONTENIDO DEL INDEX -->
+    <h1>Administración de Vehículos</h1>
+    
+    <p>Bienvenido a la página de administración de vehículos en el condominio. Aquí puedes gestionar los detalles de los vehículos registrados.</p>
+    
+    <div class="navbar">
+      <input type="text" id="searchInput" placeholder="Buscar vehículo...">
+      <button id="filterButton">Filtrar</button>
+      <!-- Botón para abrir la ventana modal -->
+      <button id="addButton">Agregar Vehículo</button>
+    </div>
 
-  <!-- CONTENIDO DEL INDEX -->
-  <div class="content-index">
-    <h1>TRABAJANDO EN ESTE PANEL</h1>
-    <h3>---</h3>
+    
+    <table id="vehicleTable">
+      <thead>
+        <tr>
+          <th>Patente</th>
+          <th>Marca</th>
+          <th>Modelo</th>
+          <th>Tipo</th>
+          <th>Color</th>
+          <th>Propietario</th>
+          <th>Rut Propietario</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>NCRN-20</td>
+          <td>Chevrolet</td>
+          <td>Camaro</td>
+          <td>Sedan</td>
+          <td>Gris</td>
+          <td>Ana Cerna</td>
+          <td>21117956-2</td>
+          <td>
+            <button id="editVeh"><img src="/assets/img/icons/edit.png" alt="Editar"></button>
+            <button id="deleteVeh"><img src="/assets/img/icons/delete.png" alt="Eliminar"></button>
+          </td>
+        </tr>
+        <tr>
+          <td>HXDF-88</td>
+          <td>Nissan</td>
+          <td>Sentra</td>
+          <td>Sedan</td>
+          <td>Blanco</td>
+          <td>Aniuska Ojeda</td>
+          <td>12345678-9</td>
+                    <td>
+            <button><img src="/assets/img/icons/edit.png" alt="Editar"></button>
+            <button><img src="/assets/img/icons/delete.png" alt="Eliminar"></button>
+          </td>
+        </tr>
+        <tr>
+          <td>HXDF-88</td>
+          <td>Nissan</td>
+          <td>Sentra</td>
+          <td>Sedan</td>
+          <td>Blanco</td>
+          <td>Aniuska Ojeda</td>
+          <td>12345678-9</td>
+                    <td>
+            <button><img src="/assets/img/icons/edit.png" alt="Editar"></button>
+            <button><img src="/assets/img/icons/delete.png" alt="Eliminar"></button>
+          </td>
+        </tr>
+        <tr>
+          <td>HXDF-88</td>
+          <td>Nissan</td>
+          <td>Sentra</td>
+          <td>Sedan</td>
+          <td>Blanco</td>
+          <td>Aniuska Ojeda</td>
+          <td>12345678-9</td>
+                    <td>
+            <button><img src="/assets/img/icons/edit.png" alt="Editar"></button>
+            <button><img src="/assets/img/icons/delete.png" alt="Eliminar"></button>
+          </td>
+        </tr>
+        <tr>
+          <td>HXDF-88</td>
+          <td>Nissan</td>
+          <td>Sentra</td>
+          <td>Sedan</td>
+          <td>Blanco</td>
+          <td>Aniuska Ojeda</td>
+          <td>12345678-9</td>
+                    <td>
+            <button><img src="/assets/img/icons/edit.png" alt="Editar"></button>
+            <button><img src="/assets/img/icons/delete.png" alt="Eliminar"></button>
+          </td>
+        </tr>
+        <tr>
+          <td>HXDF-88</td>
+          <td>Nissan</td>
+          <td>Sentra</td>
+          <td>Sedan</td>
+          <td>Blanco</td>
+          <td>Aniuska Ojeda</td>
+          <td>12345678-9</td>
+                    <td>
+            <button><img src="/assets/img/icons/edit.png" alt="Editar"></button>
+            <button><img src="/assets/img/icons/delete.png" alt="Eliminar"></button>
+          </td>
+        </tr>      </tbody>
+    </table>
+    
+    <script>
+      // Aquí se puede agregar el código JavaScript para la funcionalidad de búsqueda, filtrado, agregar, modificar y eliminar vehículos.
+    </script>
   </div>
+
+  
+      <!-- Ventana modal  AGREGAR VEHICULO-->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <h2>Agregar Vehículo</h2>
+          <form id="addForm">
+            <label for="patente">Patente:</label>
+            <input type="text" id="patente" required>
+            
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" required>
+            
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" required>
+            
+            <label for="tipo">Tipo:</label>
+            <input type="text" id="tipo" required>
+            
+            <label for="color">Color:</label>
+            <input type="text" id="color" required>
+            
+            <label for="propietario">Propietario:</label>
+            <input type="text" id="propietario" required>
+            
+            <label for="rutPropietario">Rut Propietario:</label>
+            <input type="text" id="rutPropietario" required>
+            
+            <div class="modal-buttons">
+              <button type="submit" class="add-button">Agregar</button>
+              <button type="button" class="clear-button">Cerrar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Ventana modal ELIMINAR VEHICULO -->
+      <div id="modaldelete" class="modal">
+        <div class="modal-content">
+          <h2>¿Seguro que desea eliminar registro?</h2>
+          <div class="modal-buttons">
+            <button type="submit" class="yesdelete">Si</button>
+            <Button type="button" class="clear-button">No</Button>
+          </div>
+        </div>
+      </div>
 
 
 </body>
 </html>
-<script src="assets/js/autenticador.js"></script>
+<script src="/assets/js/autenticador.js"></script>
+<script src="/assets/js/modal.js"></script>
