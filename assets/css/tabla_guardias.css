@@ -18,7 +18,7 @@ p {
 /* Estilos de la barra de navegación */
 .navbar {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   margin-bottom: 20px;
 }
@@ -36,6 +36,10 @@ p {
   border: none;
   cursor: pointer;
 }
+.buttons-end {
+  margin-left: auto;
+}
+
 #addButton {
   padding: 8px 16px;
   background-color: #28a745;
@@ -44,32 +48,59 @@ p {
   border-radius: 4px;
   margin-left: 5em;
   cursor: pointer;
-  float: right;
 }
 
 #addButton:hover {
   background-color: #218838;
 }
 
+#editButton {
+  padding: 8px 16px;
+  background-color: #b6c330;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5em;
+  cursor: pointer;
+}
+
+#editButton:hover {
+  background-color: #7f8821;
+}
+
+#deleteButton {
+  padding: 8px 16px;
+  background-color: #a72828;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-left: 5em;
+  cursor: pointer;
+}
+
+#deleteButton:hover {
+  background-color: #882121;
+}
+
 /* Estilos de la tabla */
-#tabla-resultados {
+#tabla-resultados-guardias {
   width: 100%;
   border-collapse: collapse;
 }
 
-#tabla-resultados th,
-#tabla-resultados td {
+#tabla-resultados-guardias th,
+#tabla-resultados-guardias td {
   padding: 10px;
   text-align: start;
   border-bottom: 1px solid #ccc;
 }
 
-#tabla-resultados th {
+#tabla-resultados-guardias th {
   background-color: #f1f1f1;
   font-weight: bold;
 }
 
-#tabla-resultados td:last-child {
+#tabla-resultados-guardias td:last-child {
   text-align: start;
 }
 
@@ -106,20 +137,20 @@ p {
   cursor: pointer;
 }
 
-#tabla-resultados th {
+#tabla-resultados-guardias th {
   background-color: #007bff;
   color: #fff;
 }
 
-#tabla-resultados td {
+#tabla-resultados-guardias td {
   color: #333;
 }
-#tabla-resultados tr td button {
+#tabla-resultados-guardias tr td button {
     border: none;
     border-radius: 10px;
     margin-left: 10px;
 }
-#tabla-resultados tr td button img{
+#tabla-resultados-guardias tr td button img{
     height: 25px;
   }
 
@@ -146,8 +177,11 @@ p {
   #filterButton {
     width: 100%;
   }
-
-  #addButton {
+  .buttons-end{
+    margin-left: 10px;
+    padding: 10px;
+  }
+  .buttons-end button {
     float: none;
     margin-bottom: 10px;
   }
@@ -167,6 +201,7 @@ p {
   }
 
   .modal-content {
+    text-align: center;
     border-radius: 10px;
     background-color: #fff;
     margin: 10% auto; /* Ajusta la posición verticalmente */
@@ -196,6 +231,7 @@ label {
 }
 
 input[type="text"] {
+  text-align: center;
   /* width: 100%; */
   padding: 8px;
   border: 1px solid #ccc;

@@ -65,40 +65,45 @@
     <!-- TABLA GUARDIAS -->
     <div class="container">
     <!-- CONTENIDO DEL INDEX -->
-    <h1>Administración de empleados</h1>
+    <h1>Administración de guardias de seguridad</h1>
     
-    <p>Bienvenido a la página de administración de empleados en el condominio. Aquí puedes gestionar los detalles de los empleados registrados.</p>
+    <p>Bienvenido a la página de administración de guardias en el condominio. Aquí puedes gestionar los detalles de los guaridas registrados.</p>
     
     <div class="navbar">
       <input type="text" id="searchInput" placeholder="Buscar empleado...">
       <button id="filterButton">Filtrar</button>
       <!-- Botón para abrir la ventana modal -->
-      <button id="addButton">Agregar empleado</button>
+      <div class="buttons-end">
+        <button id="addButton"><img src="/assets/img/icons/add.png" alt="Agregar"></button>
+        <button id="editButton"><img src="/assets/img/icons/edit.png" alt="Editar"></button>
+        <button id="deleteButton"><img src="/assets/img/icons/delete.png" alt="Eliminar"></button>
+      </div>
     </div>
 
     
-    <table id="tabla-resultados">
+    <table id="tabla-resultados-guardias">
       <thead>
         <tr>
           <th>RUT</th>
           <th>Nombres</th>
           <th>Apellidos</th>
+          <th>Dirección</th>
           <th>Correo</th>
           <th>Cargo</th>
-          <th>Dirección</th>
           <th>Comuna</th>
+          <th>Región</th>
         </tr>
       </thead>
       <tbody id="tabla-body"></tbody>
     </table>
-
+    
   </div>
   <!-- MODAL PARA LOS FORMULARIOS -->
   <!-- Ventana modal  AGREGAR EMPLEADO-->
   <div id="modal" class="modal">
     <div class="modal-content">
-      <h2>Agregar Vehículo</h2>
-      <form id="addForm">
+      <h2>Agregar Empleado</h2>
+      <form id="addForm" action="/agregarEmpleado" method="POST">
         <label for="patente">RUT:</label>
         <input type="text" id="rut" required>
         
@@ -107,9 +112,6 @@
         
         <label for="modelo">Apellido:</label>
         <input type="text" id="apellido" required>
-        
-        <label for="tipo">Dirección:</label>
-        <input type="text" id="direccion" required>
         
         <label for="color">Correo:</label>
         <input type="text" id="correo" required>
@@ -120,8 +122,9 @@
         <label for="propietario">Direccion:</label>
         <input type="text" id="estado" required>
         
-        <label for="rutPropietario">Comuna:</label>
-        <input type="text" id="estado" required>
+        <label for="comuna">Comuna:</label>
+        <input type="text" id="comuna" required>
+
         
         <div class="modal-buttons">
           <button type="submit" class="add-button">Agregar</button>
@@ -131,16 +134,58 @@
     </div>
   </div>
 
+    <!-- Ventana modal EDITAR EMPLEADO -->
+<!-- Ventana modal EDITAR EMPLEADO -->
+<div id="modaledit" class="modal">
+  <div class="modal-content">
+    <h2>Ingrese rut que desea editar:</h2>
+    <input type="text" id="rutInput" placeholder="Ingrese el rut">
+    <button type="button" class="add-button" id="buscarButton">Buscar</button>
+
+    <form id="editarEmpleadoForm">
+      <label for="rut">RUT:</label>
+      <input type="text" id="rut" required>
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" required>
+
+      <label for="correo">Correo:</label>
+      <input type="text" id="correo" required>
+
+      <label for="cargo">Cargo:</label>
+      <input type="text" id="cargo" required>
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" required>
+
+      <label for="comuna">Comuna:</label>
+      <input type="text" id="comuna" required>
+
+      <div class="modal-buttons">
+        <button type="submit" class="add-button">Agregar</button>
+        <button type="button" class="clear-button">Cerrar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
   <!-- Ventana modal ELIMINAR EMPLEADO -->
   <div id="modaldelete" class="modal">
     <div class="modal-content">
-      <h2>¿Seguro que desea eliminar registro?</h2>
+      <label for="rutInput">Ingrese rut que desea eliminar:</label><br><br>
+      <input type="text" id="rutInput" placeholder="Ingrese el rut">
+      <p>¿Seguro que desea eliminar el rut?</p>
       <div class="modal-buttons">
-        <button type="submit" class="yesdelete">Si</button>
-        <Button type="button" class="clear-button">No</Button>
+        <button type="submit" class="yesdelete">Sí</button>
+        <button type="button" class="clear-button">No</button>
       </div>
     </div>
   </div>
+
     <!-- FOOTER DE LA PAGINA -->
     <footer class="footer">
         <!-- Contenido del pie de página -->

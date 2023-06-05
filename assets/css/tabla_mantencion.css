@@ -1,0 +1,272 @@
+/* Estilos generales */
+.container {
+    margin-left: 200px;
+  }
+  
+  /* Estilos del encabezado */
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos de la barra de navegación */
+  .navbar {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  #searchInput {
+    padding: 8px;
+    width: 300px;
+    margin-right: 10px;
+  }
+  
+  #filterButton {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .buttons-end {
+    margin-left: auto;
+  }
+  
+  #addButton {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-left: 5em;
+    cursor: pointer;
+  }
+  
+  #addButton:hover {
+    background-color: #218838;
+  }
+  
+  #editButton {
+    padding: 8px 16px;
+    background-color: #b6c330;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-left: 5em;
+    cursor: pointer;
+  }
+  
+  #editButton:hover {
+    background-color: #7f8821;
+  }
+  
+  #deleteButton {
+    padding: 8px 16px;
+    background-color: #a72828;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-left: 5em;
+    cursor: pointer;
+  }
+  
+  #deleteButton:hover {
+    background-color: #882121;
+  }
+  
+  /* Estilos de la tabla */
+  #tabla-resultados-jardinero {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #tabla-resultados-jardinero th,
+  #tabla-resultados-jardinero td {
+    padding: 10px;
+    text-align: start;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  #tabla-resultados-jardinero th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+  }
+  
+  #tabla-resultados-jardinero td:last-child {
+    text-align: start;
+  }
+  
+  /* Estilos adicionales para un aspecto empresarial */
+  .container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  p {
+    color: #777;
+  }
+  
+  .navbar {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  #searchInput {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #filterButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #tabla-resultados-jardinero th {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  #tabla-resultados-jardinero td {
+    color: #333;
+  }
+  #tabla-resultados-jardinero tr td button {
+      border: none;
+      border-radius: 10px;
+      margin-left: 10px;
+  }
+  #tabla-resultados-jardinero tr td button img{
+      height: 25px;
+    }
+  
+  #addButton {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+      margin-left: 200;
+      margin-top: 0;
+      padding: 10px;
+    }
+  
+    #searchInput {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    #filterButton {
+      width: 100%;
+    }
+    .buttons-end{
+      margin-left: 10px;
+      padding: 10px;
+    }
+    .buttons-end button {
+      float: none;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* MODAL PARA AGREGAR VEHICULOS */
+  .modal {
+      display: none; /* Oculta el modal por defecto */
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
+    }
+  
+    .modal-content {
+      text-align: center;
+      border-radius: 10px;
+      background-color: #fff;
+      margin: 10% auto; /* Ajusta la posición verticalmente */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+    }
+    .modal-content {
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: grid;
+    gap: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="text"] {
+    text-align: center;
+    /* width: 100%; */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .add-button, .clear-button, .yesdelete {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-button, .yesdelete {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .clear-button {
+    background-color: #ff0303;
+    color: white;
+    border-radius: 5px
+  }
+  
+  @media (max-width: 768px) {
+    form {
+      grid-template-columns: 1fr;
+    }
+  }

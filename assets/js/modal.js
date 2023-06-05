@@ -13,12 +13,27 @@
             modal.style.display = 'none';
           }
         });
-        
+        //MODAL PARA EDITAR
+        const editButton = document.getElementById('editButton')
+        const modaledit = document.getElementById('modaledit')
 
-        const deleteVeh = document.getElementById('deleteVeh')
+        editButton.addEventListener('click', () => {
+            modaledit.style.display = 'block';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modaledit || event.target.classList.contains('clear-button')) {
+                modaledit.style.display = 'none'
+            }
+        });
+
+
+
+        // MODAL DE ELIMINAR
+        const deleteVeh = document.getElementById('deleteButton')
         const modaldelete = document.getElementById('modaldelete')
 
-        deleteVeh.addEventListener('click', () => {
+        deleteButton.addEventListener('click', () => {
             modaldelete.style.display = 'block';
         });
 
