@@ -4,43 +4,43 @@ const tbodyJardinero = tablaResultadosJardinero.querySelector('#tabla-body');
 // Función para agregar filas a la tabla
 function agregarFilaEmpleado(empleado, tbody) {
   const fila = document.createElement('tr');
-  
-  // Orden y campos modificados
-  const celdaRUT = document.createElement('td');
-  celdaRUT.textContent = empleado.rut_dv;
-  
-  const celdaNombres = document.createElement('td');
-  celdaNombres.textContent = empleado.nombres;
-  
-  const celdaApellidos = document.createElement('td');
-  celdaApellidos.textContent = empleado.apellidos;
-  
-  const celdaDireccion = document.createElement('td');
-  celdaDireccion.textContent = empleado.direccion;
-  
-  const celdaCorreo = document.createElement('td');
-  celdaCorreo.textContent = empleado.mail;
-  
-  const celdaCargo = document.createElement('td');
-  celdaCargo.textContent = empleado.cargo;
-  
-  const celdaComuna = document.createElement('td');
-  celdaComuna.textContent = empleado.nombre_comuna;
-  
-  const celdaRegion = document.createElement('td');
-  celdaRegion.textContent = empleado.nombre_region;
 
-  // Agrega las celdas a la fila en el orden deseado
-  fila.appendChild(celdaRUT);
-  fila.appendChild(celdaNombres);
-  fila.appendChild(celdaApellidos);
-  fila.appendChild(celdaDireccion);
-  fila.appendChild(celdaCorreo);
-  fila.appendChild(celdaCargo);
-  fila.appendChild(celdaComuna);
-  fila.appendChild(celdaRegion);
+  const rutCell = document.createElement('td');
+  rutCell.textContent = empleado.rut_dv;
+  fila.appendChild(rutCell);
 
-  // Agrega la fila al cuerpo de la tabla
+  const nombresCell = document.createElement('td');
+  nombresCell.textContent = empleado.nombres;
+  fila.appendChild(nombresCell);
+
+  const apellidosCell = document.createElement('td');
+  apellidosCell.textContent = empleado.apellidos;
+  fila.appendChild(apellidosCell);
+
+  const direccionCell = document.createElement('td');
+  direccionCell.textContent = empleado.direccion;
+  fila.appendChild(direccionCell);
+
+  const correoCell = document.createElement('td');
+  correoCell.textContent = empleado.mail;
+  fila.appendChild(correoCell);
+
+  const estatusCell = document.createElement('td');
+  estatusCell.textContent = empleado.estatus;
+  fila.appendChild(estatusCell);
+
+  const cargoCell = document.createElement('td');
+  cargoCell.textContent = empleado.cargo;
+  fila.appendChild(cargoCell);
+
+  const comunaCell = document.createElement('td');
+  comunaCell.textContent = empleado.nombre_comuna;
+  fila.appendChild(comunaCell);
+
+  const regionCell = document.createElement('td');
+  regionCell.textContent = empleado.nombre_region;
+  fila.appendChild(regionCell);
+
   tbody.appendChild(fila);
 }
 
