@@ -1,197 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ADMIN > PERSONAL > MANTENCION</title>
-    <base href="/">
-    <link rel="stylesheet" href="/assets/css/navbar.css">
-    <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <link rel="stylesheet" href="/assets/css/tabla_mantencion.css">
-</head>
-<body>
-      <!-- NAVBAR DE LA PAGINA, EL ENCABEZADO -->
-  <header>
-    <div class="logo">
-        <a href="/index.html"><img src="/assets/img/logo.png" alt="Logotipo de la empresa"></a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#"><img src="/assets/img/icons/setting.png" alt="Icono configuracion"></a></li>
-        <li><a href="/pages/login.html"><img src="/assets/img/icons/logout.png" alt="Icono cerrar sesion"></a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- SIDEMENU LATERAL IZQUIERDO -->
-    <div class="sidemenu">
-        <ul class="categories">
-          <li class="category">
-              <a href="#">SEGURIDAD</a>
-              <ul class="subcategories">
-              <li><a href="/pages/seguridad/guardias.html">GUARDIAS</a></li>
-              <li><a href="#">Subcategoría 1.2</a></li>
-              <li><a href="#">Subcategoría 1.3</a></li>
-              </ul>
+    <base href="/" />
+    <link rel="stylesheet" href="/assets/css/navbar.css" />
+    <link rel="stylesheet" href="/assets/css/sidemenu.css" />
+    <link rel="stylesheet" href="/assets/css/tabla_mantencion.css" />
+  </head>
+  <body>
+    <!-- NAVBAR DE LA PAGINA, EL ENCABEZADO -->
+    <header>
+      <div class="logo">
+        <a href="/pages/panel.html"
+          ><img src="assets/img/logo.png" alt="Logotipo de la empresa"
+        /></a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="/pages/panel.html"
+              ><img src="/assets/img/icons/house.png" alt="Icono configuracion"
+            /></a>
           </li>
-          <li class="category">
-              <a href="#">INGRESOS</a>
-              <ul class="subcategories">
-              <li><a href="/pages/ingresos/vehiculo.html">VEHICULO</a></li>
-              <li><a href="/pages/ingresos/residente.html">RESIDENTE</a></li>
-              <li><a href="/pages/ingresos/visitas.html">VISITAS</a></li>
-              <li><a href="/pages/ingresos/paqueteria.html">PAQUETERIA</a></li>
-              </ul>
-          </li>
-          <li class="category">
-              <a href="#">PERSONAL CONDOMINIO</a>
-              <ul class="subcategories">
-              <li><a href="/pages/personal_cond/aseo.html">ASEO</a></li>
-              <li><a href="/pages/personal_cond/mantencion.html">MANTENCION</a></li>
-              <li><a href="/pages/personal_cond/otros.html">OTROS</a></li>
-              </ul>
-          </li>
-          <li class="category">
-              <a href="#">ADMINISTRACION</a>
-              <ul class="subcategories">
-              <li><a href="/pages/administracion/gastos.html">GASTOS</a></li>
-              <li><a href="/pages/administracion/costos.html">COSTOS</a></li>
-              <li><a href="/pages/administracion/informes.html">INFORMES</a></li>
-              </ul>
+          <li>
+            <a href="/index.html"
+              ><img src="assets/img/icons/logout.png" alt="Icono cerrar sesion"
+            /></a>
           </li>
         </ul>
+      </nav>
+    </header>
+
+    <!-- SIDEMENU LATERAL IZQUIERDO -->
+    <div class="sidemenu">
+      <ul class="categories">
+        <li class="category">
+          <a href="#">SEGURIDAD</a>
+          <ul class="subcategories">
+            <li><a href="/pages/seguridad/guardias.html">GUARDIAS</a></li>
+            <li><a href="#">Subcategoría 1.2</a></li>
+            <li><a href="#">Subcategoría 1.3</a></li>
+          </ul>
+        </li>
+        <li class="category">
+          <a href="#">INGRESOS</a>
+          <ul class="subcategories">
+            <li><a href="/pages/ingresos/vehiculo.html">VEHICULO</a></li>
+            <li><a href="/pages/ingresos/residente.html">RESIDENTE</a></li>
+            <li><a href="/pages/ingresos/visitas.html">VISITAS</a></li>
+            <li><a href="/pages/ingresos/paqueteria.html">PAQUETERIA</a></li>
+          </ul>
+        </li>
+        <li class="category">
+          <a href="#">PERSONAL CONDOMINIO</a>
+          <ul class="subcategories">
+            <li><a href="/pages/personal_cond/aseo.html">ASEO</a></li>
+            <li>
+              <a href="/pages/personal_cond/mantencion.html">MANTENCION</a>
+            </li>
+            <li><a href="/pages/personal_cond/otros.html">OTROS</a></li>
+          </ul>
+        </li>
+        <li class="category">
+          <a href="#">ADMINISTRACION</a>
+          <ul class="subcategories">
+            <li><a href="/pages/administracion/gastos.html">GASTOS</a></li>
+            <li><a href="/pages/administracion/costos.html">COSTOS</a></li>
+            <li><a href="/pages/administracion/informes.html">INFORMES</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <!-- TABLA GUARDIAS -->
     <div class="container">
-    <!-- CONTENIDO DEL INDEX -->
-    <h1>Administración de personal de mantencion</h1>
-    
-    <p>Bienvenido a la página de administración de personal de mantencion en el condominio. Aquí puedes gestionar los detalles de personal de mantencion registrados.</p>
-    
-    <div class="navbar">
-      <input type="text" id="searchInput" placeholder="Buscar empleado...">
-      <button id="filterButton">Filtrar</button>
-      <!-- Botón para abrir la ventana modal -->
-      <div class="buttons-end">
-        <button id="addButton"><img src="/assets/img/icons/add.png" alt="Agregar"></button>
-        <button id="editButton"><img src="/assets/img/icons/edit.png" alt="Editar"></button>
-        <button id="deleteButton"><img src="/assets/img/icons/delete.png" alt="Eliminar"></button>
+      <!-- CONTENIDO DEL INDEX -->
+      <h1>Administración de personal de mantencion</h1>
+
+      <p>
+        Bienvenido a la página de administración de personal de mantencion en el
+        condominio. Aquí puedes gestionar los detalles de personal de mantencion
+        registrados.
+      </p>
+
+      <div class="navbar">
+        <input type="text" id="searchInput" placeholder="Buscar empleado..." />
+        <button id="filterButton">Filtrar</button>
+        <!-- Botón para abrir la ventana modal -->
+        <div class="buttons-end">
+          <button id="addButton">
+            <img src="/assets/img/icons/add.png" alt="Agregar" />
+          </button>
+          <button id="editButton">
+            <img src="/assets/img/icons/edit.png" alt="Editar" />
+          </button>
+          <button id="deleteButton">
+            <img src="/assets/img/icons/delete.png" alt="Eliminar" />
+          </button>
+        </div>
+      </div>
+
+      <table id="tabla-resultados-jardinero">
+        <thead>
+          <tr>
+            <th>RUT</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Dirección</th>
+            <th>Correo</th>
+            <th>Estado</th>
+            <th>Cargo</th>
+            <th>Comuna</th>
+            <th>Región</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-body"></tbody>
+      </table>
+    </div>
+    <!-- MODAL PARA LOS FORMULARIOS -->
+    <!-- Ventana modal  AGREGAR EMPLEADO-->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h2>Agregar Empleado</h2>
+        <form id="addForm" action="/agregarEmpleado" method="POST">
+          <label for="patente">RUT:</label>
+          <input type="text" id="rut" required />
+
+          <label for="marca">Nombre:</label>
+          <input type="text" id="nombre" required />
+
+          <label for="modelo">Apellido:</label>
+          <input type="text" id="apellido" required />
+
+          <label for="color">Correo:</label>
+          <input type="text" id="correo" required />
+
+          <label for="rutPropietario">Cargo:</label>
+          <input type="text" id="cargo" required />
+
+          <label for="propietario">Direccion:</label>
+          <input type="text" id="estado" required />
+
+          <label for="comuna">Comuna:</label>
+          <input type="text" id="comuna" required />
+
+          <div class="modal-buttons">
+            <button type="submit" class="add-button">Agregar</button>
+            <button type="button" class="clear-button">Cerrar</button>
+          </div>
+        </form>
       </div>
     </div>
-
-    
-    <table id="tabla-resultados-jardinero">
-      <thead>
-        <tr>
-          <th>RUT</th>
-          <th>Nombres</th>
-          <th>Apellidos</th>
-          <th>Dirección</th>
-          <th>Correo</th>
-          <th>Estado</th>
-          <th>Cargo</th>
-          <th>Comuna</th>
-          <th>Región</th>
-        </tr>
-      </thead>
-      <tbody id="tabla-body"></tbody>
-    </table>
-    
-  </div>
-  <!-- MODAL PARA LOS FORMULARIOS -->
-  <!-- Ventana modal  AGREGAR EMPLEADO-->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <h2>Agregar Empleado</h2>
-      <form id="addForm" action="/agregarEmpleado" method="POST">
-        <label for="patente">RUT:</label>
-        <input type="text" id="rut" required>
-        
-        <label for="marca">Nombre:</label>
-        <input type="text" id="nombre" required>
-        
-        <label for="modelo">Apellido:</label>
-        <input type="text" id="apellido" required>
-        
-        <label for="color">Correo:</label>
-        <input type="text" id="correo" required>
-
-        <label for="rutPropietario">Cargo:</label>
-        <input type="text" id="cargo" required>
-
-        <label for="propietario">Direccion:</label>
-        <input type="text" id="estado" required>
-        
-        <label for="comuna">Comuna:</label>
-        <input type="text" id="comuna" required>
-
-        
-        <div class="modal-buttons">
-          <button type="submit" class="add-button">Agregar</button>
-          <button type="button" class="clear-button">Cerrar</button>
-        </div>
-      </form>
-    </div>
-  </div>
 
     <!-- Ventana modal EDITAR EMPLEADO -->
-<!-- Ventana modal EDITAR EMPLEADO -->
-<div id="modaledit" class="modal">
-  <div class="modal-content">
-    <h2>Ingrese rut que desea editar:</h2>
-    <input type="text" id="rutInput" placeholder="Ingrese el rut">
-    <button type="button" class="add-button" id="buscarButton">Buscar</button>
+    <!-- Ventana modal EDITAR EMPLEADO -->
+    <div id="modaledit" class="modal">
+      <div class="modal-content">
+        <h2>Ingrese rut que desea editar:</h2>
+        <input type="text" id="rutInput" placeholder="Ingrese el rut" />
+        <button type="button" class="add-button" id="buscarButton">
+          Buscar
+        </button>
 
-    <form id="editarEmpleadoForm">
-      <label for="rut">RUT:</label>
-      <input type="text" id="rut" required>
+        <form id="editarEmpleadoForm">
+          <label for="rut">RUT:</label>
+          <input type="text" id="rut" required />
 
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" required>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" required />
 
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" required>
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" required />
 
-      <label for="correo">Correo:</label>
-      <input type="text" id="correo" required>
+          <label for="correo">Correo:</label>
+          <input type="text" id="correo" required />
 
-      <label for="cargo">Cargo:</label>
-      <input type="text" id="cargo" required>
+          <label for="cargo">Cargo:</label>
+          <input type="text" id="cargo" required />
 
-      <label for="direccion">Dirección:</label>
-      <input type="text" id="direccion" required>
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" required />
 
-      <label for="comuna">Comuna:</label>
-      <input type="text" id="comuna" required>
+          <label for="comuna">Comuna:</label>
+          <input type="text" id="comuna" required />
 
-      <div class="modal-buttons">
-        <button type="submit" class="add-button">Agregar</button>
-        <button type="button" class="clear-button">Cerrar</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-
-  <!-- Ventana modal ELIMINAR EMPLEADO -->
-  <div id="modaldelete" class="modal">
-    <div class="modal-content">
-      <label for="rutInput">Ingrese rut que desea eliminar:</label><br><br>
-      <input type="text" id="rutInput" placeholder="Ingrese el rut">
-      <p>¿Seguro que desea eliminar el rut?</p>
-      <div class="modal-buttons">
-        <button type="submit" class="yesdelete">Sí</button>
-        <button type="button" class="clear-button">No</button>
+          <div class="modal-buttons">
+            <button type="submit" class="add-button">Agregar</button>
+            <button type="button" class="clear-button">Cerrar</button>
+          </div>
+        </form>
       </div>
     </div>
-  </div>
+
+    <!-- Ventana modal ELIMINAR EMPLEADO -->
+    <div id="modaldelete" class="modal">
+      <div class="modal-content">
+        <label for="rutInput">Ingrese rut que desea eliminar:</label
+        ><br /><br />
+        <input type="text" id="rutInput" placeholder="Ingrese el rut" />
+        <p>¿Seguro que desea eliminar el rut?</p>
+        <div class="modal-buttons">
+          <button type="submit" class="yesdelete">Sí</button>
+          <button type="button" class="clear-button">No</button>
+        </div>
+      </div>
+    </div>
 
     <!-- FOOTER DE LA PAGINA -->
     <footer class="footer">
-        <!-- Contenido del pie de página -->
+      <!-- Contenido del pie de página -->
     </footer>
     <script src="/assets/js/tabla_mantencion.js"></script>
     <script src="/assets/js/modal.js"></script>
-</body>
+  </body>
 </html>

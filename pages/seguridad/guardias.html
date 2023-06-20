@@ -1,198 +1,312 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ADMIN > SEGURIDAD > GUARDIAS</title>
-    <base href="/">
-    <link rel="stylesheet" href="/assets/css/navbar.css">
-    <link rel="stylesheet" href="/assets/css/sidemenu.css">
-    <link rel="stylesheet" href="/assets/css/tabla_guardias.css">
-</head>
-<body>
-      <!-- NAVBAR DE LA PAGINA, EL ENCABEZADO -->
-  <header>
-    <div class="logo">
-        <a href="/index.html"><img src="/assets/img/logo.png" alt="Logotipo de la empresa"></a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#"><img src="/assets/img/icons/setting.png" alt="Icono configuracion"></a></li>
-        <li><a href="/pages/login.html"><img src="/assets/img/icons/logout.png" alt="Icono cerrar sesion"></a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- SIDEMENU LATERAL IZQUIERDO -->
-    <div class="sidemenu">
-        <ul class="categories">
-          <li class="category">
-              <a href="#">SEGURIDAD</a>
-              <ul class="subcategories">
-              <li><a href="/pages/seguridad/guardias.html">GUARDIAS</a></li>
-              <li><a href="#">Subcategoría 1.2</a></li>
-              <li><a href="#">Subcategoría 1.3</a></li>
-              </ul>
+    <base href="/" />
+    <link rel="stylesheet" href="/assets/css/navbar.css" />
+    <link rel="stylesheet" href="/assets/css/sidemenu.css" />
+    <link rel="stylesheet" href="/assets/css/tabla_guardias.css" />
+  </head>
+  <body>
+    <!-- NAVBAR DE LA PAGINA, EL ENCABEZADO -->
+    <header>
+      <div class="logo">
+        <a href="/pages/panel.html"
+          ><img src="assets/img/logo.png" alt="Logotipo de la empresa"
+        /></a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="/pages/panel.html"
+              ><img src="/assets/img/icons/house.png" alt="Icono configuracion"
+            /></a>
           </li>
-          <li class="category">
-              <a href="#">INGRESOS</a>
-              <ul class="subcategories">
-              <li><a href="/pages/ingresos/vehiculo.html">VEHICULO</a></li>
-              <li><a href="/pages/ingresos/residente.html">RESIDENTE</a></li>
-              <li><a href="/pages/ingresos/visitas.html">VISITAS</a></li>
-              <li><a href="/pages/ingresos/paqueteria.html">PAQUETERIA</a></li>
-              </ul>
-          </li>
-          <li class="category">
-              <a href="#">PERSONAL CONDOMINIO</a>
-              <ul class="subcategories">
-              <li><a href="/pages/personal_cond/aseo.html">ASEO</a></li>
-              <li><a href="/pages/personal_cond/mantencion.html">MANTENCION</a></li>
-              <li><a href="/pages/personal_cond/otros.html">OTROS</a></li>
-              </ul>
-          </li>
-          <li class="category">
-              <a href="#">ADMINISTRACION</a>
-              <ul class="subcategories">
-              <li><a href="/pages/administracion/gastos.html">GASTOS</a></li>
-              <li><a href="/pages/administracion/costos.html">COSTOS</a></li>
-              <li><a href="/pages/administracion/informes.html">INFORMES</a></li>
-              </ul>
+          <li>
+            <a href="/index.html"
+              ><img src="assets/img/icons/logout.png" alt="Icono cerrar sesion"
+            /></a>
           </li>
         </ul>
+      </nav>
+    </header>
+
+    <!-- SIDEMENU LATERAL IZQUIERDO -->
+    <div class="sidemenu">
+      <ul class="categories">
+        <li class="category">
+          <a href="#">SEGURIDAD</a>
+          <ul class="subcategories">
+            <li><a href="/pages/seguridad/guardias.html">GUARDIAS</a></li>
+            <li><a href="#">Subcategoría 1.2</a></li>
+            <li><a href="#">Subcategoría 1.3</a></li>
+          </ul>
+        </li>
+        <li class="category">
+          <a href="#">INGRESOS</a>
+          <ul class="subcategories">
+            <li><a href="/pages/ingresos/vehiculo.html">VEHICULO</a></li>
+            <li><a href="/pages/ingresos/residente.html">RESIDENTE</a></li>
+            <li><a href="/pages/ingresos/visitas.html">VISITAS</a></li>
+            <li><a href="/pages/ingresos/paqueteria.html">PAQUETERIA</a></li>
+          </ul>
+        </li>
+        <li class="category">
+          <a href="#">PERSONAL CONDOMINIO</a>
+          <ul class="subcategories">
+            <li><a href="/pages/personal_cond/aseo.html">ASEO</a></li>
+            <li>
+              <a href="/pages/personal_cond/mantencion.html">MANTENCION</a>
+            </li>
+            <li><a href="/pages/personal_cond/otros.html">OTROS</a></li>
+          </ul>
+        </li>
+        <li class="category">
+          <a href="#">ADMINISTRACION</a>
+          <ul class="subcategories">
+            <li><a href="/pages/administracion/gastos.html">GASTOS</a></li>
+            <li><a href="/pages/administracion/costos.html">COSTOS</a></li>
+            <li><a href="/pages/administracion/informes.html">INFORMES</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
     <!-- TABLA GUARDIAS -->
     <div class="container">
-    <!-- CONTENIDO DEL INDEX -->
-    <h1>Administración de guardias de seguridad</h1>
-    
-    <p>Bienvenido a la página de administración de guardias en el condominio. Aquí puedes gestionar los detalles de los guaridas registrados.</p>
-    
-    <div class="navbar">
-      <input type="text" id="searchInput" placeholder="Buscar empleado...">
-      <button id="filterButton">Filtrar</button>
-      <!-- Botón para abrir la ventana modal -->
-      <div class="buttons-end">
-        <button id="addButton"><img src="/assets/img/icons/add.png" alt="Agregar"></button>
-        <button id="editButton"><img src="/assets/img/icons/edit.png" alt="Editar"></button>
-        <button id="deleteButton"><img src="/assets/img/icons/delete.png" alt="Eliminar"></button>
+      <!-- CONTENIDO DEL INDEX -->
+      <h1>Administración de guardias de seguridad</h1>
+
+      <p>
+        Bienvenido a la página de administración de guardias en el condominio.
+        Aquí puedes gestionar los detalles de los guaridas registrados.
+      </p>
+
+      <div class="navbar">
+        <input type="text" id="searchInput" placeholder="Buscar empleado..." />
+        <button id="filterButton">Filtrar</button>
+        <!-- Botón para abrir la ventana modal -->
+        <div class="buttons-end">
+          <button id="addButton">
+            <img src="/assets/img/icons/add.png" alt="Agregar" />
+          </button>
+          <button id="editButton">
+            <img src="/assets/img/icons/edit.png" alt="Editar" />
+          </button>
+          <button id="deleteButton">
+            <img src="/assets/img/icons/delete.png" alt="Eliminar" />
+          </button>
+        </div>
+      </div>
+
+      <table id="tabla-resultados-guardias">
+        <thead>
+          <tr>
+            <th>RUT</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Dirección</th>
+            <th>Correo</th>
+            <th>Estado</th>
+            <th>Cargo</th>
+            <th>Comuna</th>
+            <th>Región</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-body"></tbody>
+      </table>
+    </div>
+    <!-- MODAL PARA LOS FORMULARIOS -->
+    <!-- Ventana modal AGREGAR EMPLEADO -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h2>Agregar Empleado</h2>
+        <form id="addForm" action="/agregarEmpleado" method="POST">
+          <div class="form-group">
+            <label for="rut">RUT:</label>
+            <div class="rut-input">
+              <input
+                class="rut-field"
+                type="text"
+                id="rut"
+                name="rut"
+                placeholder="Rut"
+                required
+              />
+              <input
+                class="dv-field"
+                type="text"
+                id="dv"
+                name="dv"
+                placeholder="DV"
+                required
+              />
+            </div>
+            <small>Ejemplo: 12345678-9</small>
+          </div>
+
+          <div class="form-group">
+            <label for="nombre">Nombres:</label>
+            <div class="name-fields">
+              <input
+                class="np"
+                type="text"
+                id="primerNombre"
+                name="primer_nombre"
+                placeholder="Primer nombre"
+                required
+              />
+              <input
+                class="np"
+                type="text"
+                id="segundoNombre"
+                name="segundo_nombre"
+                placeholder="Segundo nombre"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellidos:</label>
+            <div class="lastname-fields">
+              <input
+                class="np"
+                type="text"
+                id="primerApellido"
+                name="primer_apellido"
+                placeholder="Primer apellido"
+                required
+              />
+              <input
+                class="np"
+                type="text"
+                id="segundoApellido"
+                name="segundo_apellido"
+                placeholder="Segundo apellido"
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="correo">Correo electrónico:</label>
+            <input
+              type="text"
+              id="correo"
+              name="mail"
+              placeholder="Escribe el correo electrónico"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="cargo">Cargo de empleado:</label>
+            <select id="cargo" name="id_cargo" required>
+              <option value="" selected disabled hidden>
+                Selecciona un cargo
+              </option>
+              <!-- Opciones de cargo generadas dinámicamente -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input
+              type="text"
+              id="direccion"
+              name="direccion"
+              placeholder="Escribe la calle y número de casa/departamento"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="region">Región:</label>
+            <select id="region" name="id_region" required>
+              <option value="" selected disabled hidden>
+                Selecciona una región
+              </option>
+              <!-- Opciones de región generadas dinámicamente -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="comuna">Comuna:</label>
+            <select id="comuna" name="id_comuna" required>
+              <option value="" selected disabled hidden>
+                Selecciona una comuna
+              </option>
+              <!-- Opciones de comuna generadas dinámicamente -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <button type="submit">Agregar Empleado</button>
+          </div>
+        </form>
       </div>
     </div>
-
-    
-    <table id="tabla-resultados-guardias">
-      <thead>
-        <tr>
-          <th>RUT</th>
-          <th>Nombres</th>
-          <th>Apellidos</th>
-          <th>Dirección</th>
-          <th>Correo</th>
-          <th>Estado</th>
-          <th>Cargo</th>
-          <th>Comuna</th>
-          <th>Región</th>
-        </tr>
-      </thead>
-      <tbody id="tabla-body"></tbody>
-    </table>
-    
-  </div>
-  <!-- MODAL PARA LOS FORMULARIOS -->
-  <!-- Ventana modal  AGREGAR EMPLEADO-->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <h2>Agregar Empleado</h2>
-      <form id="addForm" action="/agregarEmpleado" method="POST">
-        <label for="patente">RUT:</label>
-        <input type="text" id="rut" required>
-        
-        <label for="marca">Nombre:</label>
-        <input type="text" id="nombre" required>
-        
-        <label for="modelo">Apellido:</label>
-        <input type="text" id="apellido" required>
-        
-        <label for="color">Correo:</label>
-        <input type="text" id="correo" required>
-
-        <label for="rutPropietario">Cargo:</label>
-        <input type="text" id="cargo" required>
-
-        <label for="propietario">Direccion:</label>
-        <input type="text" id="estado" required>
-        
-        <label for="comuna">Comuna:</label>
-        <input type="text" id="comuna" required>
-
-        
-        <div class="modal-buttons">
-          <button type="submit" class="add-button">Agregar</button>
-          <button type="button" class="clear-button">Cerrar</button>
-        </div>
-      </form>
-    </div>
-  </div>
 
     <!-- Ventana modal EDITAR EMPLEADO -->
-<!-- Ventana modal EDITAR EMPLEADO -->
-<div id="modaledit" class="modal">
-  <div class="modal-content">
-    <h2>Ingrese rut que desea editar:</h2>
-    <input type="text" id="rutInput" placeholder="Ingrese el rut">
-    <button type="button" class="add-button" id="buscarButton">Buscar</button>
+    <div id="modaledit" class="modal">
+      <div class="modal-content">
+        <h2>Ingrese el RUT que desea editar:</h2>
+        <input type="text" id="rutInput" placeholder="Ingrese el RUT" />
+        <input type="text" id="dvInput" placeholder="Ingrese el DV" />
+        <button type="button" class="add-button" id="buscarButton">
+          Buscar
+        </button>
+        <div id="errorDiv" style="display: none; color: red"></div>
 
-    <form id="editarEmpleadoForm">
-      <label for="rut">RUT:</label>
-      <input type="text" id="rut" required>
+        <form id="editarEmpleadoForm" style="display: none">
+          <label for="rut">RUT:</label>
+          <input type="text" id="rut" readonly required />
 
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" required>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" required />
 
-      <label for="apellido">Apellido:</label>
-      <input type="text" id="apellido" required>
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" required />
 
-      <label for="correo">Correo:</label>
-      <input type="text" id="correo" required>
+          <label for="correo">Correo:</label>
+          <input type="text" id="correo" required />
 
-      <label for="cargo">Cargo:</label>
-      <input type="text" id="cargo" required>
+          <label for="cargo">Cargo:</label>
+          <input type="text" id="cargo" required />
 
-      <label for="direccion">Dirección:</label>
-      <input type="text" id="direccion" required>
+          <label for="direccion">Dirección:</label>
+          <input type="text" id="direccion" required />
 
-      <label for="comuna">Comuna:</label>
-      <input type="text" id="comuna" required>
+          <label for="comuna">Comuna:</label>
+          <input type="text" id="comuna" required />
 
-      <div class="modal-buttons">
-        <button type="submit" class="add-button">Agregar</button>
-        <button type="button" class="clear-button">Cerrar</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-
-  <!-- Ventana modal ELIMINAR EMPLEADO -->
-  <div id="modaldelete" class="modal">
-    <div class="modal-content">
-      <label for="rutInput">Ingrese rut que desea eliminar:</label><br><br>
-      <input type="text" id="rutInput" placeholder="Ingrese el rut">
-      <input type="text" id="dvInput" placeholder="Ingrese digito verificador">
-      <p>¿Seguro que desea eliminar el rut?</p>
-      <div class="modal-buttons">
-        <button type="submit" class="yesdelete">Sí</button>
-        <button type="button" class="clear-button">No</button>
+          <div class="modal-buttons">
+            <button type="submit" class="add-button">Guardar</button>
+            <button type="button" class="clear-button">Cerrar</button>
+          </div>
+        </form>
       </div>
     </div>
-  </div>
+
+    <!-- Ventana modal ELIMINAR EMPLEADO -->
+    <div id="modaldelete" class="modal">
+      <div class="modal-content">
+        <label for="rutInput">Ingrese el RUT que desea eliminar:</label
+        ><br /><br />
+        <input type="text" id="rutInput" placeholder="Ingrese el RUT" />
+        <p>¿Seguro que desea eliminar el empleado?</p>
+        <div class="modal-buttons">
+          <button type="submit" class="yesdelete">Sí</button>
+          <button type="button" class="clear-button">No</button>
+        </div>
+      </div>
+    </div>
 
     <!-- FOOTER DE LA PAGINA -->
     <footer class="footer">
-        <!-- Contenido del pie de página -->
+      <!-- Contenido del pie de página -->
     </footer>
-    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/tabla_guardias.js"></script>
     <script src="/assets/js/modal.js"></script>
-</body>
+  </body>
 </html>

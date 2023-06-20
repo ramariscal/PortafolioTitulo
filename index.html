@@ -1,84 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
-  <title>ADMINISTRACION</title>
-  <base href="/">
-  <!-- ESTILOS CSS -->
-  <link rel="stylesheet" href="/assets/css/navbar.css">
-  <link rel="stylesheet" href="/assets/css/sidemenu.css">
-  <link rel="stylesheet" href="/assets/css/index.css">
-  <!-- Firebase App (el core de Firebase) -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio de sesión</title>
+    <base href="/" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/css/login.css" />
+  </head>
 
-  <!-- Añade los productos que usarás -->
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-</head>
-<body class="no-scroll">
-  <!-- NAVBAR DE LA PAGINA, EL ENCABEZADO -->
-  <header>
-    <div class="logo">
-      <a href="index.html"><img src="assets/img/logo.png" alt="Logotipo de la empresa"></a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#"><img src="assets/img/icons/setting.png" alt="Icono configuracion"></a></li>
-        <li><a href="pages/login.html"><img src="assets/img/icons/logout.png" alt="Icono cerrar sesion"></a></li>
-      </ul>
-    </nav>
-  </header>
+  <body>
+    <h1>Inicio de sesión</h1>
+    <form id="login-form" method="post">
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" name="username" required />
+      <br /><br />
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required />
+      <br /><br />
+      <input type="submit" value="Iniciar sesión" />
+    </form>
+    <br />
+    <a href="#">¿Olvidaste tu contraseña?</a>
 
-  <!-- SIDEMENU LATERAL IZQUIERDO -->
-  <div class="sidemenu">
-    <ul class="categories">
-      <li class="category">
-          <a href="#">SEGURIDAD</a>
-          <ul class="subcategories">
-          <li><a href="/pages/seguridad/guardias.html">GUARDIAS</a></li>
-          <li><a href="#">Subcategoría 1.2</a></li>
-          <li><a href="#">Subcategoría 1.3</a></li>
-          </ul>
-      </li>
-      <li class="category">
-          <a href="#">INGRESOS</a>
-          <ul class="subcategories">
-          <li><a href="/pages/ingresos/vehiculo.html">VEHICULO</a></li>
-          <li><a href="/pages/ingresos/residente.html">RESIDENTE</a></li>
-          <li><a href="/pages/ingresos/visitas.html">VISITAS</a></li>
-          <li><a href="/pages/ingresos/paqueteria.html">PAQUETERIA</a></li>
-          </ul>
-      </li>
-      <li class="category">
-          <a href="#">PERSONAL CONDOMINIO</a>
-          <ul class="subcategories">
-          <li><a href="/pages/personal_cond/aseo.html">ASEO</a></li>
-          <li><a href="/pages/personal_cond/mantencion.html">MANTENCION</a></li>
-          <li><a href="/pages/personal_cond/otros.html">OTROS</a></li>
-          </ul>
-      </li>
-      <li class="category">
-          <a href="#">ADMINISTRACION</a>
-          <ul class="subcategories">
-          <li><a href="/pages/administracion/gastos.html">GASTOS</a></li>
-          <li><a href="/pages/administracion/costos.html">COSTOS</a></li>
-          <li><a href="/pages/administracion/informes.html">INFORMES</a></li>
-          </ul>
-      </li>
-    </ul>
-</div>
-
-
-  <!-- CONTENIDO DEL INDEX -->
-  <div class="content-index">
-    <h1>PANEL DE ADMINISTRACION</h1>
-    <h3>Aqui puedes administrar el Condominio</h3>
-  </div>
-
-
-</body>
+    <script src="/assets/js/autenticador.js"></script>
+    <script src="/assets/js/redireccion.js"></script>
+  </body>
 </html>
-<script src="assets/js/autenticador.js"></script>

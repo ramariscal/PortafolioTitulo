@@ -18,7 +18,6 @@ p {
 /* Estilos de la barra de navegación */
 .navbar {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   margin-bottom: 20px;
 }
@@ -36,6 +35,7 @@ p {
   border: none;
   cursor: pointer;
 }
+
 .buttons-end {
   margin-left: auto;
 }
@@ -145,14 +145,16 @@ p {
 #tabla-resultados-guardias td {
   color: #333;
 }
+
 #tabla-resultados-guardias tr td button {
-    border: none;
-    border-radius: 10px;
-    margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
 }
-#tabla-resultados-guardias tr td button img{
-    height: 25px;
-  }
+
+#tabla-resultados-guardias tr td button img {
+  height: 25px;
+}
 
 #addButton {
   background-color: #28a745;
@@ -177,40 +179,51 @@ p {
   #filterButton {
     width: 100%;
   }
-  .buttons-end{
+
+  .buttons-end {
     margin-left: 10px;
     padding: 10px;
   }
+
   .buttons-end button {
     float: none;
     margin-bottom: 10px;
+  }
+
+  .rut-field,
+  .dv-field {
+    width: 100%;
   }
 }
 
 /* MODAL PARA AGREGAR VEHICULOS */
 .modal {
-    display: none; /* Oculta el modal por defecto */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
-  }
+  display: none;
+  /* Oculta el modal por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Fondo oscuro semitransparente */
+}
 
-  .modal-content {
-    text-align: center;
-    border-radius: 10px;
-    background-color: #fff;
-    margin: 10% auto; /* Ajusta la posición verticalmente */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-  }
-  .modal-content {
+.modal-content {
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 10% auto;
+  /* Ajusta la posición verticalmente */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.modal-content {
   background-color: #f1f1f1;
   padding: 20px;
 }
@@ -232,7 +245,6 @@ label {
 
 input[type="text"] {
   text-align: center;
-  /* width: 100%; */
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -245,15 +257,18 @@ input[type="text"] {
   margin-top: 20px;
 }
 
-.add-button, .clear-button, .yesdelete {
+.add-button,
+.clear-button,
+.yesdelete {
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.add-button, .yesdelete {
-  background-color: #4CAF50;
+.add-button,
+.yesdelete {
+  background-color: #4caf50;
   color: white;
   margin-right: 10px;
   border-radius: 5px;
@@ -262,11 +277,85 @@ input[type="text"] {
 .clear-button {
   background-color: #ff0303;
   color: white;
-  border-radius: 5px
+  border-radius: 5px;
 }
 
 @media (max-width: 768px) {
   form {
     grid-template-columns: 1fr;
   }
+}
+
+/* Estilos personalizados para el formulario del modal */
+#addForm .form-group {
+  display: grid;
+  gap: 15px;
+}
+
+#addForm .form-group label {
+  text-align: left;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+#addForm .form-group input[type="text"],
+#addForm .form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#addForm .name-fields,
+#addForm .lastname-fields {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#addForm .name-fields input[type="text"],
+#addForm .lastname-fields input[type="text"] {
+  width: 100%;
+}
+
+#addForm .form-group.correo,
+#addForm .form-group.direccion,
+#addForm .form-group.cargo,
+#addForm .form-group.region,
+#addForm .form-group.comuna {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#addForm .form-group.correo input[type="text"],
+#addForm .form-group.direccion input[type="text"] {
+  grid-column: span 3;
+}
+
+#addForm .form-group.cargo select,
+#addForm .form-group.region select,
+#addForm .form-group.comuna select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#addForm .form-group button {
+  grid-column: span 3;
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#addForm .form-group button:hover {
+  background-color: #23527c;
 }

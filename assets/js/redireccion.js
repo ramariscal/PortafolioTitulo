@@ -18,10 +18,10 @@ const auth = firebase.auth();
 auth.onAuthStateChanged(user => {
   if (user) {
     // Si el usuario está conectado, redirigirlo a la página de inicio
-    window.location.href = "/index.html";
+    window.location.href = "/pages/panel.html";
   } else {
     // Si el usuario no está conectado, redirigirlo a la página de inicio de sesión
-    window.location.href = "/pages/login.html";
+    window.location.href = "/index.html";
   }
 });
 
