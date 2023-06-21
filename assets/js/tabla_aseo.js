@@ -1,92 +1,65 @@
-// Obtén una referencia a la tabla de aseo y al cuerpo de la tabla
-const tablaResultadosAseo = document.getElementById('tabla-resultados-aseo');
-const tbodyAseo = tablaResultadosAseo.querySelector('#tabla-body');
-// Función para agregar filas a la tabla
-function agregarFilaEmpleado(empleado, tbody) {
-  const fila = document.createElement('tr');
-
-  const rutCell = document.createElement('td');
-  rutCell.textContent = empleado.rut_dv;
-  fila.appendChild(rutCell);
-
-  const nombresCell = document.createElement('td');
-  nombresCell.textContent = empleado.nombres;
-  fila.appendChild(nombresCell);
-
-  const apellidosCell = document.createElement('td');
-  apellidosCell.textContent = empleado.apellidos;
-  fila.appendChild(apellidosCell);
-
-  const direccionCell = document.createElement('td');
-  direccionCell.textContent = empleado.direccion;
-  fila.appendChild(direccionCell);
-
-  const correoCell = document.createElement('td');
-  correoCell.textContent = empleado.mail;
-  fila.appendChild(correoCell);
-
-  const estatusCell = document.createElement('td');
-  estatusCell.textContent = empleado.estatus;
-  fila.appendChild(estatusCell);
-
-  const cargoCell = document.createElement('td');
-  cargoCell.textContent = empleado.cargo;
-  fila.appendChild(cargoCell);
-
-  const comunaCell = document.createElement('td');
-  comunaCell.textContent = empleado.nombre_comuna;
-  fila.appendChild(comunaCell);
-
-  const regionCell = document.createElement('td');
-  regionCell.textContent = empleado.nombre_region;
-  fila.appendChild(regionCell);
-
-  tbody.appendChild(fila);
+// Función para obtener los datos de los jardineros desde tu API
+function obtenerDatosJardineros() {
+  return fetch("http://localhost:3000/empleadosAseo") // Reemplaza '/empleadosAseo' con la ruta correcta de tu API
+    .then((response) => response.json())
+    .catch((error) => {
+      console.error("Error al obtener los datos de los jardineros:", error);
+      return [];
+    });
 }
 
-
-// Hacer una solicitud AJAX para obtener el personal de aseo
-fetch('http://localhost:4000/TraerAseo')
-  .then(response => response.json())
-  .then(data => {
-    // Agregar las filas a la tabla de aseo
-    data.forEach(empleado => {
-      agregarFilaEmpleado(empleado, tbodyAseo);
+// Función para rellenar la tabla con los datos de los jardineros
+function llenarTablaJardineros() {
+  const tablaJardineros = document.getElementById("tabla-resultados-aseo"); // Corregir el ID de la tabla
+  const tbodyJardineros = tablaJardineros.querySelector("#tabla-body"); // Corregir el ID del tbody
+  obtenerDatosJardineros().then((data) => {
+    data.forEach((jardinero) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+              <td>${jardinero.rut}-${jardinero.dv}</td>
+              <td>${jardinero.primer_nombre} ${jardinero.segundo_nombre}</td>
+              <td>${jardinero.primer_apellido} ${jardinero.segundo_apellido}</td>
+              <td>${jardinero.direccion}</td>
+              <td>${jardinero.mail}</td>
+              <td>${jardinero.estatus}</td>
+              <td>${jardinero.cargo}</td>
+              <td>${jardinero.nombre_comuna}</td>
+              <td>${jardinero.nombre_region}</td>
+            `;
+      tbodyJardineros.appendChild(row);
     });
-  })
-  .catch(error => console.error('Error:', error));
-//Llamado de evento del boton filtrado
-const filterButton = document.getElementById('filterButton');
-filterButton.addEventListener('click', filterTable);
+  });
+}
 
-// Realizar la filtracion del llamado:
-function filterTable() {
-  const input = document.getElementById('searchInput');
-  const filterValue = input.value.toLowerCase();
-  const table = document.getElementById('tabla-resultados-aseo');
-  const rows = table.getElementsByTagName('tr');
+// Ejecutar la función para llenar la tabla al cargar la página
+document.addEventListener("DOMContentLoaded", llenarTablaJardineros);
+
+// Filtrar los datos de la tabla
+const filterButton = document.getElementById("filterButton");
+filterButton.addEventListener("click", () => {
+  const searchInput = document
+    .getElementById("searchInput")
+    .value.toLowerCase();
+  const tablaJardineros = document.getElementById("tabla-resultados-aseo"); // Corregir el ID de la tabla
+  const rows = tablaJardineros.getElementsByTagName("tr");
 
   for (let i = 0; i < rows.length; i++) {
     const row = rows[i];
+    const columns = row.getElementsByTagName("td");
+    let found = false;
 
-    // Saltar la primera fila (fila de encabezado)
-    if (i === 0) {
-      continue;
-    }
-
-    const cells = row.getElementsByTagName('td');
-    let shouldShowRow = false;
-
-    for (let j = 0; j < cells.length; j++) {
-      const cell = cells[j];
-      const cellValue = cell.textContent || cell.innerText;
-
-      if (cellValue.toLowerCase().indexOf(filterValue) > -1) {
-        shouldShowRow = true;
+    for (let j = 0; j < columns.length; j++) {
+      const columnText = columns[j].textContent.toLowerCase();
+      if (columnText.includes(searchInput)) {
+        found = true;
         break;
       }
     }
 
-    row.style.display = shouldShowRow ? '' : 'none';
+    if (found) {
+      row.style.display = "";
+    } else {
+      row.style.display = "none";
+    }
   }
-}
+});

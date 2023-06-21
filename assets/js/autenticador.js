@@ -1,6 +1,8 @@
 // Obtén el formulario y agrega un evento de escucha para el envío
 const loginForm = document.getElementById("login-form");
-loginForm.addEventListener("submit", loginUser);
+if (loginForm) {
+  loginForm.addEventListener("submit", loginUser);
+}
 
 // Función para validar y autenticar al usuario
 function loginUser(event) {
@@ -43,3 +45,39 @@ function redirectToDashboard() {
   // Por ejemplo:
   window.location.href = "/pages/panel.html";
 }
+
+// Función para limpiar las variables locales
+function clearLocalStorage() {
+  localStorage.removeItem("loggedIn");
+  localStorage.removeItem("username");
+}
+
+// Obtén el enlace de "Cerrar sesión" y agrega un evento de escucha
+const logoutLink = document.getElementById("logout-link");
+if (logoutLink) {
+  logoutLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Evita la acción predeterminada del enlace
+    clearLocalStorage(); // Limpia las variables locales
+    window.location.href = "/index.html"; // Redirecciona a la página de inicio de sesión
+  });
+}
+
+// Validar si el usuario ha iniciado sesión al cargar la página
+window.addEventListener("DOMContentLoaded", function () {
+  const loggedIn = localStorage.getItem("loggedIn");
+  const username = localStorage.getItem("username");
+
+  if (loggedIn === "true" && username) {
+    // El usuario ha iniciado sesión correctamente
+    // Redirigir a la página del panel
+    if (window.location.pathname === "/index.html") {
+      window.location.href = "/pages/panel.html";
+    }
+  } else {
+    // El usuario no ha iniciado sesión o las variables no están presentes
+    // Redirigir al usuario a la página de inicio de sesión
+    if (window.location.pathname !== "/index.html") {
+      window.location.href = "/index.html";
+    }
+  }
+});

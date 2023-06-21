@@ -1,6 +1,6 @@
 // Función para obtener los datos de los guardias desde tu API
 function obtenerDatosGuardias() {
-  return fetch("http://localhost:3000/empleados") // Reemplaza '/api/guardias' con la ruta correcta de tu API
+  return fetch("http://localhost:3000/empleadosGuardias") // Reemplaza '/api/guardias' con la ruta correcta de tu API
     .then((response) => response.json())
     .catch((error) => {
       console.error("Error al obtener los datos de los guardias:", error);

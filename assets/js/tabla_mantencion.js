@@ -1,43 +1,45 @@
 // Obtén una referencia a la tabla de aseo y al cuerpo de la tabla
-const tablaResultadosJardinero = document.getElementById('tabla-resultados-jardinero');
-const tbodyJardinero = tablaResultadosJardinero.querySelector('#tabla-body');
+const tablaResultadosJardinero = document.getElementById(
+  "tabla-resultados-jardinero"
+);
+const tbodyJardinero = tablaResultadosJardinero.querySelector("#tabla-body");
 // Función para agregar filas a la tabla
 function agregarFilaEmpleado(empleado, tbody) {
-  const fila = document.createElement('tr');
+  const fila = document.createElement("tr");
 
-  const rutCell = document.createElement('td');
+  const rutCell = document.createElement("td");
   rutCell.textContent = empleado.rut_dv;
   fila.appendChild(rutCell);
 
-  const nombresCell = document.createElement('td');
+  const nombresCell = document.createElement("td");
   nombresCell.textContent = empleado.nombres;
   fila.appendChild(nombresCell);
 
-  const apellidosCell = document.createElement('td');
+  const apellidosCell = document.createElement("td");
   apellidosCell.textContent = empleado.apellidos;
   fila.appendChild(apellidosCell);
 
-  const direccionCell = document.createElement('td');
+  const direccionCell = document.createElement("td");
   direccionCell.textContent = empleado.direccion;
   fila.appendChild(direccionCell);
 
-  const correoCell = document.createElement('td');
+  const correoCell = document.createElement("td");
   correoCell.textContent = empleado.mail;
   fila.appendChild(correoCell);
 
-  const estatusCell = document.createElement('td');
+  const estatusCell = document.createElement("td");
   estatusCell.textContent = empleado.estatus;
   fila.appendChild(estatusCell);
 
-  const cargoCell = document.createElement('td');
+  const cargoCell = document.createElement("td");
   cargoCell.textContent = empleado.cargo;
   fila.appendChild(cargoCell);
 
-  const comunaCell = document.createElement('td');
+  const comunaCell = document.createElement("td");
   comunaCell.textContent = empleado.nombre_comuna;
   fila.appendChild(comunaCell);
 
-  const regionCell = document.createElement('td');
+  const regionCell = document.createElement("td");
   regionCell.textContent = empleado.nombre_region;
   fila.appendChild(regionCell);
 
@@ -45,26 +47,26 @@ function agregarFilaEmpleado(empleado, tbody) {
 }
 
 // Hacer una solicitud AJAX para obtener el personal de mantención
-fetch('http://localhost:4000/TraerJardinero')
-  .then(response => response.json())
-  .then(data => {
+fetch("http://localhost:4000/TraerJardinero")
+  .then((response) => response.json())
+  .then((data) => {
     // Agregar las filas a la tabla de mantención
-    data.forEach(empleado => {
+    data.forEach((empleado) => {
       agregarFilaEmpleado(empleado, tbodyJardinero);
     });
   })
-  .catch(error => console.error('Error:', error));
+  .catch((error) => console.error("Error:", error));
 
 //Llamado de evento del boton filtrado
-const filterButton = document.getElementById('filterButton');
-filterButton.addEventListener('click', filterTable);
+const filterButton = document.getElementById("filterButton");
+filterButton.addEventListener("click", filterTable);
 
 // Realizar la filtracion del llamado:
 function filterTable() {
-  const input = document.getElementById('searchInput');
+  const input = document.getElementById("searchInput");
   const filterValue = input.value.toLowerCase();
-  const table = document.getElementById('tabla-resultados-jardinero');
-  const rows = table.getElementsByTagName('tr');
+  const table = document.getElementById("tabla-resultados-jardinero");
+  const rows = table.getElementsByTagName("tr");
 
   for (let i = 0; i < rows.length; i++) {
     const row = rows[i];
@@ -74,7 +76,7 @@ function filterTable() {
       continue;
     }
 
-    const cells = row.getElementsByTagName('td');
+    const cells = row.getElementsByTagName("td");
     let shouldShowRow = false;
 
     for (let j = 0; j < cells.length; j++) {
@@ -87,6 +89,6 @@ function filterTable() {
       }
     }
 
-    row.style.display = shouldShowRow ? '' : 'none';
+    row.style.display = shouldShowRow ? "" : "none";
   }
 }
